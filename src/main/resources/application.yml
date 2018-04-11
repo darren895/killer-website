@@ -1,0 +1,19 @@
+server:
+  port: 8080
+spring:
+  profiles:
+    active: dev
+
+---
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/killer
+    username: killer
+    password: sd4334629
+  jpa:
+    properties:
+      driver-class-name: org.postgresql.Driver
+    hibernate:
+      ddl-auto: update
+      dialect: org.hibernate.dialect.PostgreSQL9Dialect
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
